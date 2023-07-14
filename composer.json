@@ -1,0 +1,24 @@
+{
+    "name": "lenovo/app-salon_php_mvc_js_sass",
+    "description": "Proyecto Php 8, ModelViewController",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Lenovo\\AppSalonPhpMvcJsSass\\": "src/",
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models",
+            "Classes\\" : "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dorian Ricardo Laguna Campos",
+            "email": "richardlgcs@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.8",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
