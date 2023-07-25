@@ -5,7 +5,7 @@ require_once __DIR__ . '/../includes/app.php';
 use Controllers\AdminController;
 use Controllers\APIController;
 use Controllers\CitaController;
-use Controllers\Logincontroller;
+use Controllers\LoginController;
 use Controllers\ServicioController;
 use MVC\Router;
 
@@ -13,23 +13,23 @@ $router = new Router();
 
 
 //Iniciar sesion
-$router->get('/', [Logincontroller::class, 'login']);
-$router->post('/', [Logincontroller::class, 'login']);
-$router->get('/logout', [Logincontroller::class, 'logout']);
+$router->get('/', [LoginController::class, 'login']);
+$router->post('/', [LoginController::class, 'login']);
+$router->get('/logout', [LoginController::class, 'logout']);
 
 //Recuperar password
-$router->get('/olvide', [Logincontroller::class, 'olvide']);
-$router->post('/olvide', [Logincontroller::class, 'olvide']);
-$router->get('/recuperar', [Logincontroller::class, 'recuperar']);
-$router->post('/recuperar', [Logincontroller::class, 'recuperar']);
+$router->get('/olvide', [LoginController::class, 'olvide']);
+$router->post('/olvide', [LoginController::class, 'olvide']);
+$router->get('/recuperar', [LoginController::class, 'recuperar']);
+$router->post('/recuperar', [LoginController::class, 'recuperar']);
 
 //Crear cuenta
-$router->get('/crearCuenta', [Logincontroller::class, 'crear']);
-$router->post('/crearCuenta', [Logincontroller::class, 'crear']);
+$router->get('/crearCuenta', [LoginController::class, 'crear']);
+$router->post('/crearCuenta', [LoginController::class, 'crear']);
 
 //confirmar cuenta
-$router->get('/confirmar-cuenta', [Logincontroller::class, 'confirmar']);
-$router->get('/mensaje', [Logincontroller::class, 'mensaje']);
+$router->get('/confirmar-cuenta', [LoginController::class, 'confirmar']);
+$router->get('/mensaje', [LoginController::class, 'mensaje']);
 
 //Area privada
 $router->get('/cita', [CitaController::class, 'index']);
